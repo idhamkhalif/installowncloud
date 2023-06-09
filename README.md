@@ -1,6 +1,6 @@
 # Install Owncloud Ubuntu
 
-#1.Install Apache2 HTTP Server
+# 1.Install Apache2 HTTP Server
 
 sudo apt install apache2
 
