@@ -1,1 +1,1 @@
-# installowncloud
+# install owncloud ubuntu
