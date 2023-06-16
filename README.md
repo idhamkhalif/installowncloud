@@ -10,20 +10,21 @@ systemctl start apache2
 systemctl enable apache2
 
 systemctl status apache2
-# output
-● apache2.service - The Apache HTTP Server
-     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
-     Active: active (running)
-       Docs: https://httpd.apache.org/docs/2.4/
-    Process: 845 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
-   Main PID: 998 (apache2)
-      Tasks: 6 (limit: 2797)
-     Memory: 27.4M
-        CPU: 420ms
-     CGroup: /system.slice/apache2.service
-             ├─ 998 /usr/sbin/apache2 -k start
-             ├─1033 /usr/sbin/apache2 -k start
-             ├─1034 /usr/sbin/apache2 -k start
-             ├─1035 /usr/sbin/apache2 -k start
-             ├─1037 /usr/sbin/apache2 -k start
-             └─1038 /usr/sbin/apache2 -k start
+
+# 3. Install PHP dan Extentionnya
+add-apt-repository ppa:ondrej/php
+
+apt update
+
+apt install php7.4 php7.4-{opcache,gd,curl,mysqlnd,intl,json,ldap,mbstring,mysqlnd,xml,zip}
+
+# 4. Install MySql untuk database dan membuat database
+
+apt install mysql-server
+
+systemctl start mysql
+systemctl enable mysql
+
+systemctl status mysql
+
+
