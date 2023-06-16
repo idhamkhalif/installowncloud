@@ -52,4 +52,38 @@ mysql> FLUSH PRIVILEGES;
 
 mysql> exit;
 
+# 5. Install owncloud
+
+wget https://download.owncloud.com/server/stable/owncloud-complete-latest.zip
+
+unzip owncloud-complete-latest.zip -d /var/www/
+
+mkdir -p /var/www/owncloud/data
+
+chown -R www-data:www-data /var/www/owncloud/
+
+# 6. Konfigurasi Apache untuk owncloud
+
+nano /etc/apache2/sites-available/owncloud.conf
+
+Isi kan script berikut ini :
+
+<VirtualHost *:80>
+
+ServerName cloud.your-domain.com
+
+ServerAdmin webmaster@your-domain.com
+DocumentRoot /var/www/owncloud
+
+<Directory /var/www/owncloud/>
+Options +FollowSymlinks
+AllowOverride All
+Require all granted
+</Directory>
+
+ErrorLog /var/log/apache2/cloud.your-domain.com_error.log
+CustomLog /var/log/apache2/cloud.your-domain.com_access.log combined
+
+</VirtualHost>
+
 
