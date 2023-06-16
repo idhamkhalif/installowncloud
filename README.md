@@ -80,10 +80,8 @@ Options +FollowSymlinks
 AllowOverride All
 Require all granted
 </Directory>
-
 ErrorLog /var/log/apache2/cloud.your-domain.com_error.log
 CustomLog /var/log/apache2/cloud.your-domain.com_access.log combined
-
 </VirtualHost>
 
 Enable owncloud virtual host :
