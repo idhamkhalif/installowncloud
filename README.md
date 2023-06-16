@@ -27,4 +27,13 @@ systemctl enable mysql
 
 systemctl status mysql
 
+# Konfigurasi MySql
+mysql_secure_installation
+
+- Set root password? [Y/n] Y
+- Remove anonymous users? [Y/n] Y
+- Disallow root login remotely? [Y/n] Y
+- Remove test database and access to it? [Y/n] Y
+- Reload privilege tables now? [Y/n] Y
+
 
