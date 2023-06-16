@@ -43,4 +43,10 @@ mysql> CREATE DATABASE owncloud;
 
 mysql> CREATE USER 'owncloud'@'localhost' IDENTIFIED BY 'Str0ngPEd6';
 
+mysql> GRANT ALL PRIVILEGES ON owncloud. * TO 'owncloud'@'localhost';
+
+mysql> FLUSH PRIVILEGES;
+
+mysql> exit;
+
 
