@@ -40,6 +40,7 @@ mysql -u root -p
 
 Membuat database :
 mysql> CREATE DATABASE owncloud;
+
 mysql> CREATE USER 'owncloud'@'localhost' IDENTIFIED BY 'Str0ngPEd6';
 
 
