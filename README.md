@@ -86,6 +86,10 @@ CustomLog /var/log/apache2/cloud.your-domain.com_access.log combined
 
 </VirtualHost>
 
+Enable owncloud virtual host :
 
+a2ensite owncloud.conf
+
+systemctl restart apache2
 
 
