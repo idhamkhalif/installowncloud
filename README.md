@@ -27,7 +27,7 @@ systemctl enable mysql
 
 systemctl status mysql
 
-# Konfigurasi MySql
+Konfigurasi MySql :
 mysql_secure_installation
 
 - Set root password? [Y/n] Y
@@ -36,4 +36,12 @@ mysql_secure_installation
 - Remove test database and access to it? [Y/n] Y
 - Reload privilege tables now? [Y/n] Y
 
+mysql -u root -p
+
+Membuat database :
+mysql> CREATE DATABASE owncloud;
+mysql> CREATE USER 'owncloud'@'localhost' IDENTIFIED BY 'Str0ngPEd6';
+mysql> GRANT ALL PRIVILEGES ON owncloud. * TO 'owncloud'@'localhost';
+mysql> FLUSH PRIVILEGES;
+mysql> exit;
 
