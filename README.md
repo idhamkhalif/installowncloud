@@ -36,11 +36,11 @@ mysql_secure_installation
 - Remove test database and access to it? [Y/n] Y
 - Reload privilege tables now? [Y/n] Y
 
-Menjalankan MySql:
+- Menjalankan MySql:
 
 mysql -u root -p
 
-Membuat database :
+- Membuat database :
 
 mysql> CREATE DATABASE owncloud;
 
